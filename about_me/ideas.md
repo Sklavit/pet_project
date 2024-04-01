@@ -14,7 +14,7 @@ So I need:
 - inside should be async agent
 - interface may be done as web interface
 - for web interface I need seb server (FastAPI is popular one) and API 
-
+- do we need some sort of LogIn?
 
 
 
