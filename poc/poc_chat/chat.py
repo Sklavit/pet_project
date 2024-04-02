@@ -9,8 +9,6 @@ from screens.quit_screen import QuitScreen
 class ChatApp(App):
     """A pet chat application."""
 
-    # CSS_PATH = "chat.tcss"
-
     BINDINGS = [("q", "request_quit", "Quit")]
 
     def on_mount(self) -> None:
@@ -19,12 +17,12 @@ class ChatApp(App):
     def action_request_quit(self) -> None:
         """Action to display the quit dialog."""
 
-        def check_quit(quit: bool) -> None:
+        def quit_screen_callback(result: bool) -> None:
             """Called when QuitScreen is dismissed."""
-            if quit:
+            if result:
                 self.exit()
 
-        self.push_screen(QuitScreen(), check_quit)
+        self.push_screen(QuitScreen(), quit_screen_callback)
 
 
 if __name__ == "__main__":

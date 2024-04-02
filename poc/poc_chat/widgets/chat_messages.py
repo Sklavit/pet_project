@@ -18,35 +18,29 @@ class ChatMessages(Placeholder):
         """Event handler called when a button is pressed."""
         button_id = event.button.id
         if button_id == "send":
-            new_message = Utterance()
+            new_message = Message()
             self.query_one("#messages").mount(new_message)
-            new_message.scroll_visible()  # scroll_visible is not working
-
-            # (self.get_child_by_id("messages")
-            # .compose_add_child(  # TODO use something else
-            #     Utterance()
-            # ))
+            new_message.scroll_visible()  # TODO scroll_visible is not working ? use VerticalScroll?
+            # TODO use Log instead of extra components ?
 
     def compose(self) -> ComposeResult:
+        """Content of the Chat Messages widget."""
         yield Column(id="messages")
-        # with Horizontal():
-        #     yield UserInput(id="input_place")
-        #     yield SendButton("Send", id="send", variant="success")
         input_container = Horizontal(
             UserInput(id="input_place", placeholder="What do you want to say?"),
             SendButton("Send", id="send", variant="success")
         )
-        input_container.height = 5
+        input_container.height = 5  # not working TODO use styles
         yield input_container
 
     def on_mount(self) -> None:
         self.query_one(SendButton).tooltip = "Send the message to the chat"
 
 
-class Column(ScrollableContainer):  # VerticalScroll):
+class Column(ScrollableContainer):  # VerticalScroll):  # TODO will it fix scroll_visible?
     def compose(self) -> ComposeResult:
-        for tweet_no in range(1, 2):
-            yield Utterance(id=f"Utterance{tweet_no}")
+        for i in range(1, 3):
+            yield Message(id=f"Message{i}")
 
 
 class UserInput(Input):
@@ -59,9 +53,10 @@ class UserInput(Input):
     """
 
 
-class Utterance(Label):
+class Message(Label):
+    """Representation of the message in the chat."""
     DEFAULT_CSS = """
-    Utterance {
+    Message {
         border: solid;
     }
     """
@@ -71,6 +66,8 @@ class Utterance(Label):
 
 
 class SendButton(Button):
+    """Button for sending the message to the chat."""
+
     DEFAULT_CSS = """
     SendButton {
         width: 10;

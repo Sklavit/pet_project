@@ -1,3 +1,5 @@
+#  Copyright (c) 2024. https://textual.textualize.io/guide/screens/#__tabbed_7_1
+
 QuitScreen {
     align: center middle;
 }

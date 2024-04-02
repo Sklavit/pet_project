@@ -1,4 +1,4 @@
-# Copyright @ https://textual.textualize.io/guide/screens/#__tabbed_7_1
+#  Copyright (c) 2024. https://textual.textualize.io/guide/screens/#__tabbed_7_1
 
 from textual.app import ComposeResult
 from textual.containers import Grid
