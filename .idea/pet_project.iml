@@ -2,8 +2,9 @@
 <module version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="env" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="$MODULE_DIR$/apps/streamlit_ds_chat/env" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ttdeliveroo" />
+    <orderEntry type="module" module-name="30days-i18n" />
   </component>
 </module>
