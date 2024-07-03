@@ -13,10 +13,12 @@ API_URL = "https://api-inference.huggingface.co/models/gpt2"
 # Headers for authentication
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
+
 # Function to query the model
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
+
 
 # Example input
 data = {

@@ -40,3 +40,15 @@ It's now time to install the `streamlit` library:
 conda install streamlit
 ```
 
+
+## Other dependencies
+
+### For HuggingFace transformers
+ pip install transformers
+conda install pytorch
+
+### For Google vertex AI
+pip install --upgrade google-cloud-aiplatform
+sudo snap install google-cloud-cli --classic
+pip3 install black
+conda install numpy"<=2.0"
