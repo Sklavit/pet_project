@@ -23,9 +23,7 @@ import vertexai.preview.generative_models as generative_models
 
 from google.oauth2.service_account import Credentials
 
-creds = {
-
-}
+creds = {}
 
 credentials = Credentials.from_service_account_info(
     creds
