@@ -67,3 +67,7 @@ Once installed, you can run Ruff from the command line:
 ruff check   # Lint all files in the current directory.
 ruff format  # Format all files in the current directory.
 ```
+
+### Bokeh visualization
+
+pip install bokeh -- already installed?
