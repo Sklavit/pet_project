@@ -77,7 +77,7 @@ else:
                 #     stream=False,
                 # )
                 # response = api_response.candidates[0].content.parts[0]._raw_part.text
-                response = f"AI was questioned. Test answer `here`. :) "
+                response = "AI was questioned. Test answer `here`. :) "
                 st.markdown(response)
 
             print(("response:", response))

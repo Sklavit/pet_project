@@ -1,4 +1,5 @@
-import coiled, random
+import coiled
+import random
 
 
 @coiled.function()

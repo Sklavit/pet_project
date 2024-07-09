@@ -14,9 +14,8 @@ WARNING:
 Cannot find a quota project to add to ADC. You might receive a "quota exceeded" or "API not enabled" error. Run $ gcloud auth application-default set-quota-project to add a quota project.
 """
 
-import base64
 import vertexai
-from vertexai.generative_models import GenerativeModel, Part
+from vertexai.generative_models import GenerativeModel
 import vertexai.preview.generative_models as generative_models
 
 # import streamlit as st

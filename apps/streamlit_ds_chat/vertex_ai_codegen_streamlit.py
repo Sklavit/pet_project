@@ -1,7 +1,7 @@
 import streamlit as st
 
 import vertexai
-from vertexai.generative_models import GenerativeModel, Part
+from vertexai.generative_models import GenerativeModel
 import vertexai.preview.generative_models as generative_models
 from google.oauth2.service_account import Credentials
 

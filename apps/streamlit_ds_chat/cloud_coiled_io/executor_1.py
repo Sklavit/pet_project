@@ -1,11 +1,11 @@
 import coiled
-import importlib
+
+# from test_func import estimate_pi_simple
+import test_func
 
 cluster = coiled.Cluster(n_workers=2)  # Scale out to 100 machines
 client = cluster.get_client()
 
-# from test_func import estimate_pi_simple
-import test_func
 
 for i in range(10):
     input("go?")
