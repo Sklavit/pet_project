@@ -52,3 +52,18 @@ pip install --upgrade google-cloud-aiplatform
 sudo snap install google-cloud-cli --classic
 pip3 install black
 conda install numpy"<=2.0"
+
+
+### Installing Ruff
+Ruff is available as ruff on PyPI:
+
+```
+pip install ruff
+```
+
+Once installed, you can run Ruff from the command line:
+
+```bash
+ruff check   # Lint all files in the current directory.
+ruff format  # Format all files in the current directory.
+```
