@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../30days-i18n/.idea/30days-i18n.iml" filepath="$PROJECT_DIR$/../30days-i18n/.idea/30days-i18n.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pet_project.iml" filepath="$PROJECT_DIR$/.idea/pet_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/streamlit_ds_chat/.idea/streamlit_ds_chat.iml" filepath="$PROJECT_DIR$/apps/streamlit_ds_chat/.idea/streamlit_ds_chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ttdeliveroo/.idea/ttdeliveroo.iml" filepath="$PROJECT_DIR$/../ttdeliveroo/.idea/ttdeliveroo.iml" />
     </modules>
   </component>

@@ -9,6 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ttdeliveroo" />
     <orderEntry type="module" module-name="30days-i18n" />
+    <orderEntry type="module" module-name="streamlit_ds_chat" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />
