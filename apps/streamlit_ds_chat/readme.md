@@ -44,7 +44,7 @@ conda install streamlit
 ## Other dependencies
 
 ### For HuggingFace transformers
- pip install transformers
+pip install transformers
 conda install pytorch
 
 ### For Google vertex AI

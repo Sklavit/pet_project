@@ -29,7 +29,9 @@ if "vertex_ai_model" not in st.session_state or chat is None:
             "vertex_ai_model"
         ],  # by default it will be "gemini-1.5-flash-001",
         system_instruction=[
-            """You are an expert python engineer with data scientist background."""
+            "You are an expert python engineer with data scientist background."
+            "If the user's question needs code generation, respond with: <CODE>"
+            "If the user's question needs drawing a chart, respond with: <CHART>"
         ],
     )
     chat = model.start_chat()
