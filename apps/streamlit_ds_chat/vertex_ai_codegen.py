@@ -74,9 +74,7 @@ def start_code_generator_chat(
             "You must include explanations or any other important information into your answer in the form of code comments."
             "User may update the state of <locals> with messages starting with 'Update locals:'. You should update the state of <locals> respectively"
             "On message starting with '`locals' you should return the current state of <locals>.",
-            "<locals>{"
-            "df_table: {type: pandas.DataFrame, columns: ['','person','fruit','likes']}"
-            "}</locals>",
+            "<locals>{" "df_table: {type: pandas.DataFrame}" "}</locals>",
         ],
     )
     chat = model.start_chat()
