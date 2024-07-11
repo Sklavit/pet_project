@@ -1,11 +1,11 @@
 import coiled
 import streamlit as st
 import importlib
-import os.path
 
 from dask.distributed import Client
 
 import pandas as pd
+from rich.pretty import pprint
 
 from vertex_ai_codegen import (
     start_code_generator_chat,
@@ -138,16 +138,7 @@ else:
                 file_name = "task.py"
                 client.upload_file(file_name)
 
-                # Step 3: Verify the file upload
-                def check_file(filename):
-                    return os.path.exists(filename)
-
-                st.info("Verifying file transfer...")
-                st.info(
-                    client.run(check_file, file_name)
-                )  # Should print True on all workers
-
-                # Step 4: Use the uploaded module in a distributed task
+                # Use the uploaded module in a distributed task
                 def use_uploaded_module():
                     try:
                         module = importlib.import_module(file_name[:-3])
@@ -159,39 +150,26 @@ else:
                     return module.run({"df_table": dataframe})
 
                 result = client.run(use_uploaded_module)
+                result = next(iter(result.values()))
 
-                st.info(result)
+                # st.info(result)
+                print("vertexAI response:")
+                pprint(result)
+                st.info(result.get("results"))
+                st.write(result.get("results"))
 
             # TODO save results in the history
 
-            result = next(iter(result.values()))
             # Let's show some charts
             chart = result.get("chart")
             if chart:
                 st.write("Chart is here")
                 kwargs = chart.get("kwargs", {})
-                # p = figure(
-                #     title=kwargs.get("title"),
-                #     x_axis_label=kwargs.get("x_axis_label"), y_axis_label=kwargs.get("y_axis_label"))
-                #
-                # p.vbar(
-                #     x=kwargs.get("x"), top=kwargs.get("top"), width=kwargs.get("width"))
 
-                # x = [1, 2, 3, 4, 5]
-                # y = [6, 7, 2, 4, 5]
-                #
-                # p = figure(
-                #     title='simple line example',
-                #     x_axis_label='x',
-                #     y_axis_label='y')
-                #
-                # p.line(x, y, legend_label='Trend', line_width=2)
-                #
-                # st.bokeh_chart(p, use_container_width=True)
+                st.write(result.get("results"))
 
-                st.bar_chart(
-                    data=pd.DataFrame({"x": kwargs.get("x"), "top": kwargs.get("top")}),
-                )
+                st.markdown(f'*{chart.get("title")}*')
+                st.bar_chart(chart["source"], x=chart.get("x"), y=chart.get("y"))
                 # x='x', y='top', x_label=kwargs.get("x_axis_label"), y_label=kwargs.get("y_axis_label"),
                 # color=None, horizontal=False,
                 # width=None, height=None,

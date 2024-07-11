@@ -38,6 +38,8 @@ conda activate stenv
 It's now time to install the `streamlit` library:
 ```bash
 conda install streamlit
+// or
+pip install streamlit
 ```
 
 
@@ -48,7 +50,7 @@ pip install transformers
 conda install pytorch
 
 ### For Google vertex AI
-pip install --upgrade google-cloud-aiplatform
+pip install google-cloud-aiplatform   // --upgrade ?
 sudo snap install google-cloud-cli --classic
 pip3 install black
 conda install numpy"<=2.0"

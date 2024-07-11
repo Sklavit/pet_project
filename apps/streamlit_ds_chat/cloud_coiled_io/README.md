@@ -19,7 +19,7 @@ Runs dusk and pure python.
 
 # How to install Coiled
 
-Just register on `coiled.io` and follow instructions. Everythong is very simple and works great.
+Just register on `coiled.io` and follow instructions. Everything is very simple and works great.
 
 The only pitfall: all you installs probably should go from single distribution system.
 If you use conda, you should install everything with `conda install`.
