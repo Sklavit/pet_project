@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/apps/streamlit_ds_chat/cloud_coiled_io/env" />
       <excludeFolder url="file://$MODULE_DIR$/apps/streamlit_ds_chat/env" />
     </content>
-    <orderEntry type="jdk" jdkName="$MODULE_DIR$/apps/streamlit_ds_chat/env (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="$MODULE_DIR$/apps/streamlit_ds_chat/env12" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ttdeliveroo" />
     <orderEntry type="module" module-name="30days-i18n" />

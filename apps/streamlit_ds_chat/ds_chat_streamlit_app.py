@@ -169,8 +169,28 @@ else:
                 st.write(result.get("results"))
 
                 st.markdown(f'*{chart.get("title")}*')
-                st.bar_chart(chart["source"], x=chart.get("x"), y=chart.get("y"))
-                # x='x', y='top', x_label=kwargs.get("x_axis_label"), y_label=kwargs.get("y_axis_label"),
-                # color=None, horizontal=False,
-                # width=None, height=None,
-                # use_container_width=True)
+                match chart["chart_type"]:
+                    case "bar_chart":
+                        st.bar_chart(
+                            chart["source"],
+                            x=chart.get("x"),
+                            y=chart.get("y"),
+                            x_label=kwargs.get("x_label"),
+                            y_label=kwargs.get("y_label"),
+                        )
+                    case "line_chart":
+                        st.line_chart(
+                            chart["source"],
+                            x=chart.get("x"),
+                            y=chart.get("y"),
+                            x_label=kwargs.get("x_label"),
+                            y_label=kwargs.get("y_label"),
+                        )
+                    case "scatter_chart":
+                        st.scatter_chart(
+                            chart["source"],
+                            x=chart.get("x"),
+                            y=chart.get("y"),
+                            x_label=kwargs.get("x_label"),
+                            y_label=kwargs.get("y_label"),
+                        )
