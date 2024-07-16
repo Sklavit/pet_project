@@ -1,7 +1,7 @@
 Use https://streamlit.io/ as chat frontend.
 
 Requirements:
-- simple Stream.lit app - empty app - done
+- simple Streamlit app - empty app - done
 - connect to backend
 - get user questions
 - print answers

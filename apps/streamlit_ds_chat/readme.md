@@ -1,6 +1,16 @@
+Title
+feat: add Streamlit app for DS chat with Google Vertex AI and Coiled integration
+
+Overview
+Introduced a new Streamlit application for data science chat functionality using Google Vertex AI.
+Added multiple supporting scripts and modules for handling various functionalities such as code generation, cloud execution, and data visualization.
+Integrated Coiled for distributed computing and remote code execution.
+Provided detailed documentation and examples for setting up the environment, using the application, and testing different components.
+
+
 # Setting up a local development environment
 
-Before we can actually start building Streamlit apps, we will first have to setup a development environment.
+Before we can actually start building Streamlit apps, we will first have to set up a development environment.
 
 Let's start by installing and setting up a conda environment.
 

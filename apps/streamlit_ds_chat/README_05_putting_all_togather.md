@@ -1,4 +1,4 @@
-# Step 5. Put all components togather
+# Step 5. Put all components together
 
 Now I have code for:
 - running Streamlit.app
@@ -19,7 +19,7 @@ conda create -p ./env12 -c conda-forge coiled python=3.12 "numpy<2.0.0" streamli
 
 
 Known issues:
-- bokeh don't needed for workers but still is provided
+- Bokeh is not needed for workers but it is still provided.
 - StreamlitAPIException: Streamlit only supports Bokeh version 2.4.3, but you have version 3.5.0 installed. Please run `pip install --force-reinstall --no-deps bokeh==2.4.3` to install the correct version.
 - start of coiled cluster takes 1-2 minutes, but this will be the same for any cluster start on any tool
 - hard to acquire good code from code generation; it usually works, but the return value is not exactly what was requested

@@ -1,4 +1,3 @@
-import coiled
 import streamlit as st
 import importlib
 
@@ -34,6 +33,8 @@ else:
 # Create or connect to a Coiled cluster
 with st.spinner("Creating or connecting to a Coiled cluster"):
     if "cluster" not in st.session_state:
+        import coiled
+
         cluster = coiled.Cluster(
             name="my-cluster", n_workers=1, idle_timeout="20 minutes"
         )
@@ -67,6 +68,7 @@ uploaded_file = st.file_uploader("Upload a dataset to be analyzed", type=["csv"]
 
 if not uploaded_file:
     st.error("Upload dataset to work with")
+    st.stop()
 else:
     # if uploaded_file:  # and question:  # and anthropic_api_key:
     dataframe = pd.read_csv(uploaded_file)

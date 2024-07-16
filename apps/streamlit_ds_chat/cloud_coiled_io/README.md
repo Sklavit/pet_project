@@ -14,14 +14,14 @@ Your cloud credentials (securely)
 ```
 
 Works with AWS, GCloud, Azure, etc.
-Runs dusk and pure python.
+Runs Dask and pure Python.
 
 
 # How to install Coiled
 
 Just register on `coiled.io` and follow instructions. Everything is very simple and works great.
 
-The only pitfall: all you installs probably should go from single distribution system.
+The only pitfall: all you installs should probably come from single distribution system.
 If you use conda, you should install everything with `conda install`.
 If you use `pip`, you should install all packages with `pip install`.
 
@@ -34,7 +34,7 @@ coiled login
 > Authentication successful 🎉
 > Credentials have been saved at /home/s-nechuiviter/.config/dask/coiled.yaml
 
-Use `coiled setup gcp` once to setup connection to GCP.
+Use `coiled setup gcp` once to set up connection to GCP.
 
 Coiled requires that all modules should be `conda` compatible, at least if start from conda environment.
 Or use pip/venv everywhere.

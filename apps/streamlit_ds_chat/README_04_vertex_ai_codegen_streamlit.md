@@ -1,6 +1,6 @@
 
 
-For testing manager the following questions are used:
+For testing manager, the following questions are used:
 
 <q>How many unique fruits are there in the dataset?</q>
 <q>How many fruits likes each person?</q>
