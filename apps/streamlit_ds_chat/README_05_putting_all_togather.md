@@ -15,8 +15,9 @@ It is time now to put all components togather.
 Example requests:
 - Draw number of likes for people and fruits
 
+```
 conda create -p ./env12 -c conda-forge coiled python=3.12 "numpy<2.0.0" streamlit google-cloud-aiplatform dask
-
+```
 
 Known issues:
 - Bokeh is not needed for workers but it is still provided.
